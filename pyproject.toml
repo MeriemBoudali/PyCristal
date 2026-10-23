@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "pycristal"
-version = "0.1.0"
+version = "0.2.0"
 readme = "README.md"
 description = "Beautiful terminal messages for Python"
 authors = [

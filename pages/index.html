@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0a18">
+  <meta name="description" content="PyCristal — a small Python terminal styling project.">
+  <title>Home · PyCristal</title>
+  <style>
+:root {
+  color-scheme: dark;
+  --bg: #0b0a18;
+  --panel: #151329;
+  --text: #f5f3ff;
+  --muted: #b9b4d4;
+  --purple: #b69cff;
+  --cyan: #83e8ff;
+  --line: rgba(190, 170, 255, .2);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(ellipse at 80% 0%, rgba(105, 68, 190, .2), transparent 42%),
+    radial-gradient(ellipse at 0% 35%, rgba(39, 151, 190, .12), transparent 36%),
+    var(--bg);
+  line-height: 1.65;
+}
+a { color: var(--cyan); text-decoration: none; }
+a:hover { color: white; text-decoration: underline; }
+.wrap { width: min(1060px, calc(100% - 36px)); margin: 0 auto; }
+header { border-bottom: 1px solid var(--line); background: rgba(11,10,24,.72); }
+.nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.brand { color: var(--text); font-weight: 800; font-size: 1.25rem; letter-spacing: -.04em; }
+.brand span { color: var(--purple); }
+nav { display: flex; flex-wrap: wrap; gap: 18px; }
+nav a { color: var(--muted); font-size: .95rem; }
+nav a[aria-current="page"] { color: var(--cyan); }
+main { padding: 56px 0 76px; }
+.eyebrow { color: var(--cyan); text-transform: uppercase; letter-spacing: .16em; font-size: .76rem; font-weight: 800; }
+.hero { padding: 54px 0 42px; }
+h1 { font-size: clamp(2.6rem, 8vw, 5.4rem); line-height: 1.02; letter-spacing: -.065em; margin: 12px 0 18px; }
+h1 .shine { background: linear-gradient(100deg, #fff, var(--purple), var(--cyan)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+h2 { font-size: clamp(1.5rem, 4vw, 2.15rem); line-height: 1.2; letter-spacing: -.035em; margin: 0 0 12px; }
+h3 { margin: 0 0 8px; }
+.lead { color: var(--muted); font-size: 1.12rem; max-width: 680px; }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 26px 0; }
+.button { display: inline-block; padding: 11px 17px; border-radius: 12px; border: 1px solid var(--line); font-weight: 750; }
+.button.primary { background: linear-gradient(110deg, #a78bfa, #70dff7); color: #111020; border: 0; }
+.button:hover { text-decoration: none; transform: translateY(-1px); }
+.pill { display: inline-block; border: 1px solid var(--line); border-radius: 999px; padding: 4px 10px; color: var(--muted); font-size: .85rem; }
+.grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin: 28px 0; }
+.card { background: linear-gradient(145deg, rgba(25,22,49,.92), rgba(17,16,34,.92)); border: 1px solid var(--line); border-radius: 18px; padding: 22px; }
+.card p, .muted { color: var(--muted); }
+.crystal { font-size: 1.6rem; margin-bottom: 8px; }
+pre { overflow-x: auto; background: #080812; border: 1px solid var(--line); border-radius: 14px; padding: 18px; color: #d9d4ff; }
+code { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; }
+section { margin: 38px 0; }
+.note { border-left: 3px solid var(--cyan); padding: 12px 16px; background: rgba(131,232,255,.06); color: var(--muted); border-radius: 0 10px 10px 0; }
+footer { border-top: 1px solid var(--line); padding: 24px 0; color: var(--muted); font-size: .9rem; }
+footer .foot { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+ul { padding-left: 1.25rem; }
+li { margin: 7px 0; }
+@media (max-width: 720px) {
+  .nav { align-items: flex-start; flex-direction: column; padding: 16px 0; gap: 10px; }
+  nav { gap: 13px; }
+  .grid { grid-template-columns: 1fr; }
+  main { padding-top: 32px; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="index.html">✧ <span>Py</span>Cristal</a>
+    <nav aria-label="Main navigation"><a href="index.html" aria-current="page">Home</a>
+<a href="how-to-use.html">How to use</a>
+<a href="community.html">Community</a></nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <span class="pill">Python · v0.1.0</span>
+    <p class="eyebrow">Small package, colorful terminal ✦</p>
+    <h1>Meet <span class="shine">PyCristal</span></h1>
+    <p class="lead">Give your Python terminal messages a little sparkle. PyCristal is a tiny project made to make status messages easier to spot and nicer to read.</p>
+    <div class="actions">
+      <a class="button primary" href="how-to-use.html">Get started →</a>
+      <a class="button" href="https://github.com/MeriemBoudali/PyCristal" target="_blank" rel="noopener noreferrer">View on GitHub ↗</a>
+      <a class="button" href="https://pypi.org/project/pycristal/" target="_blank" rel="noopener noreferrer">PyPI ↗</a>
+    </div>
+  </section>
+  <section>
+    <h2>A little color goes a long way.</h2>
+    <div class="grid">
+      <article class="card"><div class="crystal">💎</div><h3>Easy to read</h3><p>Make success, info, warning, and error messages stand out in the terminal.</p></article>
+      <article class="card"><div class="crystal">⚡</div><h3>Simple to try</h3><p>Start with a short install command and a small Python example.</p></article>
+      <article class="card"><div class="crystal">🪄</div><h3>Made with care</h3><p>A small independent project by Meriem Boudali, built one step at a time.</p></article>
+    </div>
+  </section>
+  <section>
+    <h2>See it in your code</h2>
+    <p class="muted">Install PyCristal, then try the quick-start example.</p>
+    <pre><code>pip install pycristal
+
+import pycristal as pc
+
+pc.success("Everything looks good!")
+pc.info("Hello from PyCristal")</code></pre>
+    <p class="note">If your package uses different function names or import syntax, update this example to match the code in the published release.</p>
+  </section>
+  <section>
+    <h2>Made by people, improved by community</h2>
+    <p class="lead">Want to learn about the people behind the project or find ways to get involved?</p>
+    <a class="button" href="community.html">Meet the community →</a>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span>✧ PyCristal · v0.1.0</span>
+    <span>Made by Meriem Boudali with a little help from ChatGPT 💜</span>
+  </div>
+</footer>
+</body>
+</html>
